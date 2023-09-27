@@ -1,0 +1,8 @@
+.manue{
+    display: flex;
+    gap: 2rem;
+}
+.manue a.active{
+    text-decoration: underline;
+    color: red;
+}
