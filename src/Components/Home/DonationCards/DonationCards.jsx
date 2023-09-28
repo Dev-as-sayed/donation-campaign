@@ -10,18 +10,18 @@ const DonationCards = () => {
         fetch('blog.json')
         .then( res => res.json())
         .then(data => setDonationCards(data))
-    }, [])
-    // console.log(donationCards);
+    }, []);
+
+
     return (
-        <div className="p-20 grid grid-cols-4 gap-3">
-            {/* <h1>donation cards {donationCards.length}</h1> */}
-            {
-                donationCards.map( cards => <DonaationCard
-                 key={cards.id}
-                 cards={cards}
-                ></DonaationCard>)
-            }
-        </div>
+            <div className="p-20 grid grid-cols-4 gap-3">
+                {
+                    donationCards.map( cards => <DonaationCard
+                    key={cards.id}
+                    cards={cards}
+                    ></DonaationCard>)
+                }
+            </div>
     );
 };
 
