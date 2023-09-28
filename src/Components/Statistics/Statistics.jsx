@@ -1,5 +1,4 @@
-import React from "react";
-import { PieChart, Pie, Tooltip, Legend, Label, Cell } from 'recharts';
+import { PieChart, Pie, Tooltip, Legend,  Cell } from 'recharts';
 import { useLoaderData } from "react-router-dom";
 import { storedDonationFnc } from "../../Utility/LocalStoreg";
 
@@ -20,8 +19,6 @@ const Statistics = () => {
 
     const unDepositPercentage = ((total / totalCategoryLength) * 100).toFixed(2);
     const unDepositPercentageNum = parseInt(unDepositPercentage);
-
-    console.log(typeof(depositPercentageNum), unDepositPercentageNum);
 
     const data = [
         { name: 'Your Donation', value: depositPercentageNum },
