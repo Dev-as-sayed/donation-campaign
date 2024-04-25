@@ -2,6 +2,7 @@ import { useLoaderData, useParams } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { saveDonation } from "../../../Utility/LocalStoreg";
+import { Helmet } from "react-helmet-async";
 
 const CardDetails = () => {
 
@@ -19,6 +20,9 @@ const CardDetails = () => {
     // console.log(id, detail);
     return (
         <div className="min-h-screen ">
+            <Helmet> 
+                <title>Donation Campain | Details</title>
+            </Helmet>
             <div className="">
                 <img src={image} alt={title} className="min-w-[60%] mx-auto" />
                 <div className="max-w-[60%] h-16 bg-slate-500 mx-auto ">

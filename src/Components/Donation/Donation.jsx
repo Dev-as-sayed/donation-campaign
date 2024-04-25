@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import { storedDonationFnc } from "../../Utility/LocalStoreg";
 import SingleDonation from "./SingleDonation/SingleDonation";
+import { Helmet } from "react-helmet-async";
 
 const Donation = () => {
 
@@ -17,6 +18,9 @@ const Donation = () => {
     }, []);
     return (
         <div className="bg-white">
+            <Helmet>
+                <title>Donation Campain | Donations</title>
+            </Helmet>
             <div className="grid grid-cols-2 gap-2 mx-10 my-16">
                 {
                     depositStore.map( depo=> <SingleDonation

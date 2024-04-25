@@ -1,6 +1,7 @@
 import { PieChart, Pie, Tooltip, Legend,  Cell } from 'recharts';
 import { useLoaderData } from "react-router-dom";
 import { storedDonationFnc } from "../../Utility/LocalStoreg";
+import { Helmet } from 'react-helmet-async';
 
 
 const Statistics = () => {
@@ -28,6 +29,9 @@ const Statistics = () => {
 
     return (
         <div className=" flex justify-center min-h-screen">
+            <Helmet>
+                <title>Donation Campain | Statistics</title>
+            </Helmet>
             <PieChart width={400} height={400}>
                 <Pie
                     dataKey="value"
